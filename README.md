@@ -3,6 +3,11 @@
 > **Status**: Setup Phase
 > **Engagement Mode**: Elite Mode
 
+<!-- -->
+
+> [!WARNING]
+> **Work in Progress:** This project is currently under active development. Some modules, links and files may be placeholders.
+
 A specialized RAG-based system designed to index, structure, and retrieve SideFX Houdini documentation.
 
 ## 🏗 Architecture (Src Layout)

@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Env
+venv/
+env/
+ENV/
+.env
+
+# IDE / Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*.code-workspace
+
+# Docker
+.docker/
+
+# KEH Specific (See ADR 005)
+corpus/raw/*
+!corpus/raw/.gitkeep
+corpus/processed/*
+!corpus/processed/.gitkeep
+
+# Agent & Context (Operational)
+/_incoming/
+/protocols/
+/plans/
+/.agent/
+
+# Qdrant Data
+qdrant_storage/
+
+# Logs
+*.log

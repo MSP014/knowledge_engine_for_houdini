@@ -1,0 +1,15 @@
+# Development Dependencies (Superset of Production)
+-c requirements.txt
+
+# Tooling
+pip-tools
+
+# Testing
+pytest
+
+# QA & Security (Pre-commit)
+pre-commit
+black
+flake8
+bandit
+pip-audit

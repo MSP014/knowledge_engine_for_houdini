@@ -1,0 +1,44 @@
+# Pre-commit Guardrails - Hardcoded Environment (ADR 002 + Fix)
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+        args: ['--maxkb=10240']
+
+  - repo: local
+    hooks:
+      - id: black
+        name: black
+        entry: C:/Users/SpeLL/anaconda3/envs/keh-env/python.exe -m black
+        language: system
+        types: [python]
+
+      - id: flake8
+        name: flake8
+        entry: C:/Users/SpeLL/anaconda3/envs/keh-env/python.exe -m flake8
+        language: system
+        types: [python]
+        args: ['--ignore=E501,W503', '--max-line-length=88']
+
+      - id: bandit
+        name: bandit
+        entry: C:/Users/SpeLL/anaconda3/envs/keh-env/python.exe -m bandit
+        language: system
+        types: [python]
+        args: ["-r", "src", "tools"]
+        exclude: "tests/"
+
+      # PIP AUDIT (Optimized)
+      - id: pip-audit
+        name: pip-audit
+        # Uses requirements.txt if present, but for now allows scanning environment packages if no file arg given?
+        # Standard: scan environment
+        # Tech Debt: Ignoring CVE-2026-1703 (pip 25.3) due to pip-tools incompatibility
+        entry: C:/Users/SpeLL/anaconda3/envs/keh-env/python.exe -m pip_audit --desc=off --progress-spinner=off --ignore-vuln CVE-2026-1703
+        language: system
+        pass_filenames: false
+        always_run: true

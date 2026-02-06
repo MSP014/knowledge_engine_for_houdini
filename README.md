@@ -52,19 +52,21 @@ corpus/                 # (GitIgnored) Raw & Processed Data
 
 ## Changelog
 
-### Week of 2026-02-02 (Setup & Hardening)
+### Week of 2026-02-02 (Foundation & Standards)
 
 * **Project Launch**: Effective Start Date: **2026-02-06**
 * **Jira**:
-  * Created project board.
-  * Main task **KEH-1** ("Initializing the Project") completed (100% Done); 4h 30m logged.
+  * Initialized project workflow.
+  * Completed Project Initialization phase (Task **KEH-1**); 4h 30m logged.
 * **Architecture**:
-  * Defined stack (Python, Qdrant, Docker) and "Evidence-based answers" strategy.
-  * Deployed Src Layout (`src/`, `tests/`, `tools/`) and documentation folders (`docs/adr`, `docs/knowledge_base`).
+  * Defined foundational stack (Python, Qdrant, Docker) and rigorous verification strategy.
+  * Deployed Source Layout and architectural documentation structure.
 * **Environment & DevOps**:
-  * Created dedicated Anaconda environment (`keh-env`).
-  * Repository initialized and pushed to server.
-  * Deployed public **Readme-driven repository** on GitHub.
+  * Configured isolated development environment (`keh-env`).
+  * Established Readme-driven documentation standard.
 * **QA & Security**:
-  * Integrated Pre-commit hooks and dependency management via `pip-tools`.
-  * Implemented `pip-audit` for vulnerability monitoring (noting pip 25.3 Technical Debt).
+  * implemented strict dependency locking via `pip-tools`.
+  * Integrated security scanning (`pip-audit`) and pre-commit hooks.
+* **Documentation**:
+  * Consolidated project context and architectural vision.
+  * Refined internal operational workflows and directory scanning protocols.

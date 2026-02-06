@@ -49,3 +49,22 @@ corpus/                 # (GitIgnored) Raw & Processed Data
 * **Development**: All code must reside in `src/keh`.
 * **Commit Messages**: British English, Imperative Mood.
 * **Safety**: "Zero-Hallucination" citations required for all outputs.
+
+## Changelog
+
+### Week of 2026-02-02 (Setup & Hardening)
+
+* **Project Launch**: Effective Start Date: **2026-02-06**
+* **Jira**:
+  * Created project board.
+  * Main task **KEH-1** ("Initializing the Project") completed (100% Done); 4h 30m logged.
+* **Architecture**:
+  * Defined stack (Python, Qdrant, Docker) and "Evidence-based answers" strategy.
+  * Deployed Src Layout (`src/`, `tests/`, `tools/`) and documentation folders (`docs/adr`, `docs/knowledge_base`).
+* **Environment & DevOps**:
+  * Created dedicated Anaconda environment (`keh-env`).
+  * Repository initialized and pushed to server.
+  * Deployed public **Readme-driven repository** on GitHub.
+* **QA & Security**:
+  * Integrated Pre-commit hooks and dependency management via `pip-tools`.
+  * Implemented `pip-audit` for vulnerability monitoring (noting pip 25.3 Technical Debt).

@@ -6,7 +6,7 @@ Accepted
 
 ## Context
 
-To ensure the Knowledge Engine for Houdini (KEH) remains a pristine, well-engineered artifact, we require strict naming conventions and language protocols that align with the "Elite Mode" engagement rigor.
+To ensure the Knowledge Engine for Houdini (KEH) remains a pristine, well-engineered artifact, we require strict naming conventions and language protocols that align with the "Top Mode" engagement rigor.
 
 ## Decision
 

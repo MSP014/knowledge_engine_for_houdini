@@ -1,7 +1,6 @@
 # Knowledge Engine for Houdini (KEH)
 
 > **Status**: Setup Phase
-> **Engagement Mode**: Elite Mode
 
 <!-- -->
 

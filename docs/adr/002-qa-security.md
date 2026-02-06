@@ -6,7 +6,7 @@ Accepted
 
 ## Context
 
-The "Elite Mode" rigor demands that the code is not only functional but robust, secure, and clean. "Works on my machine" is unacceptable. We must enforce quality checks automatically.
+The "Top Mode" rigor demands that the code is not only functional but robust, secure, and clean. "Works on my machine" is unacceptable. We must enforce quality checks automatically.
 
 ## Decision
 

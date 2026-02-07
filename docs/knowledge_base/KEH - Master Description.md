@@ -71,6 +71,16 @@
 
 ### 3.1. High-Level Architecture (Src Layout)
 
+**[See Full Specification: Technical Specification - Core Architecture](docs/knowledge_base/Technical%20Specification%20-%20Core%20Architecture.md)**
+
+The system is composed of **5 Functional Contours**:
+
+1. **Input (Ingestion):** Normalizes raw help files into a `Local Raw Corpus`.
+2. **Transformation (Factory):** Converts text to Vectors (Qdrant) and Graph nodes (Neo4j).
+3. **Analytical (Brain):** The LLM core guarded by a **Reference Checker** (Zero-Hallucination Gatekeeper).
+4. **Communication (Bridge):** `kehHoudiniPanel` (PySide6) inside Houdini.
+5. **Service (Infrastructure):** Telemetry & Resource Management ($2^n$ intervals).
+
 KEH follows a modular Python package structure within `src/keh`:
 
 ```text

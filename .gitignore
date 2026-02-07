@@ -55,3 +55,6 @@ qdrant_storage/
 
 # Logs
 *.log
+
+# Archived Transmissions (Stealth)
+docs/knowledge_base/_archive/

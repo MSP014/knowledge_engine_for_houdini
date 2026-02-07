@@ -21,8 +21,20 @@ src/
 docs/
     adr/                # Architectural Decision Records
     knowledge_base/     # Operational Guides
-corpus/                 # (GitIgnored) Raw & Processed Data
+    corpus/                 # (GitIgnored) Raw & Processed Data
 ```
+
+## 🧠 System Overview (The "Truth Engine")
+
+KEH is not a simple chatbot. It is a **Reference-Checked RAG System** composed of 5 isolated contours:
+
+* **Ingestion:** Parsers normalize Houdini help files.
+* **Factory:** Converts data into Vectors and Graph nodes.
+* **Brain:** Uses a **Zero-Hallucination Feedback Loop** to audit every citation.
+* **UI:** Embeds directly into Houdini via PySide6.
+* **Telemetry:** Monitors VRAM to prevent system crashes.
+
+**[Read the Core Architecture Specification](docs/knowledge_base/Technical%20Specification%20-%20Core%20Architecture.md)**
 
 ## 🛠 Technology Stack (See ADR 004)
 
@@ -70,3 +82,4 @@ corpus/                 # (GitIgnored) Raw & Processed Data
 * **Documentation**:
   * Consolidated project context and architectural vision.
   * Refined internal operational workflows and directory scanning protocols.
+  * Standardized technical specification format: [GEM Exchange Blueprint](docs/knowledge_base/GEM%20Exchange%20Blueprint.md).

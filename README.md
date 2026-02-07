@@ -55,8 +55,10 @@ KEH is not a simple chatbot. It is a **Reference-Checked RAG System** composed o
     pip-sync
     ```
 
-2. **Hydration**:
-    * Populate `corpus/raw/` with Houdini Help files (See `docs/adr/005-corpus-hydration.md`).
+2. **Configuration**:
+    * Launch `kehHoudiniPanel` (See Interface Documentation).
+    * Set **Houdini Install Path** (e.g., `C:\Program Files\Side Effects Software\Houdini 21.0.596`).
+    * Click **"Initialize Corpus"** to trigger automated hydration.
 
 ## 📜 Protocols
 

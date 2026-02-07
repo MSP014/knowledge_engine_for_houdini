@@ -22,7 +22,30 @@ While referencing the "Nvidia Showreel Case 01" standards (which mandate Python 
 * **Deployment**: Docker Container.
 * **Rationale**: Rust-based, high performance, excellent Python client, supports hybrid search (dense + sparse).
 
-### 3. Containerization
+### 3. Orchestration & Transformation ("The Factory")
+
+* **Task Queue**: **Celery**
+* **Broker**: **Redis** (Docker)
+* **Rationale**: Asynchronous processing is required for heavy ingestion and vectorization tasks to avoid freezing the UI.
+
+### 4. Knowledge Graph
+
+* **Graph Engine**: **Neo4j** (Docker)
+* **Rationale**: Required for storing strict hierarchical relationships (SOP/DOP/VOP) and node interconnections that Vector search effectively misses.
+
+### 5. User Interface ("The Bridge")
+
+* **Framework**: **PySide6** (Qt for Python)
+* **Integration**: Embedded directly into Houdini as a Python Panel.
+* **Rationale**: Native look and feel, direct access to `hou` module.
+
+### 6. AI & Logic ("The Brain")
+
+* **Orchestrator**: **LangChain**
+* **LLM Provider**: **OpenAI** / **Groq** (External API)
+* **Monitoring**: **psutil**, **pynvml** (for Hardware Telemetry).
+
+### 7. Containerization
 
 * **Platform**: Docker / Docker Compose.
 * **Usage**: Hosting the Qdrant service and potentially the API layer in the future.

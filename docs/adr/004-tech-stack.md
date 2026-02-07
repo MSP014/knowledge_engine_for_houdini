@@ -41,7 +41,6 @@ While referencing the "Nvidia Showreel Case 01" standards (which mandate Python 
 
 ### 6. AI & Logic ("The Brain")
 
-* **Orchestrator**: **LangChain**
 * **LLM Provider**: **OpenAI** / **Groq** (External API)
 * **Monitoring**: **psutil**, **pynvml** (for Hardware Telemetry).
 

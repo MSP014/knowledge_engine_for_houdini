@@ -41,9 +41,13 @@ KEH is not a simple chatbot. It is a **Reference-Checked RAG System** composed o
 ## 🛠 Technology Stack (See ADR 004)
 
 * **Language**: Python 3.11 (Managed via `keh-env`)
-* **Vector DB**: Qdrant (Docker)
-* **Dependency Management**: `pip-tools`
-* **Quality Assurance**: `black`, `flake8`, `bandit`, `pytest`
+* **Databases**: Qdrant (Vector), Neo4j (Graph)
+* **Orchestration**: Celery (Queue), Redis (Broker)
+* **User Interface**: PySide6 (Embedded in Houdini)
+* **Infrastructure**: Docker Compose
+* **Quality Assurance**: `pip-tools`, `black`, `flake8`, `bandit`, `pytest`
+
+**[Read the full Technology Stack Decision (ADR 004)](docs/adr/004-tech-stack.md)**
 
 ## 🚀 Getting Started
 
@@ -86,4 +90,3 @@ KEH is not a simple chatbot. It is a **Reference-Checked RAG System** composed o
 * **Documentation**:
   * Consolidated project context and architectural vision.
   * Refined internal operational workflows and directory scanning protocols.
-  * Standardized technical specification format: [GEM Exchange Blueprint](docs/knowledge_base/GEM%20Exchange%20Blueprint.md).

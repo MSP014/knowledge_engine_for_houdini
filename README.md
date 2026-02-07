@@ -14,10 +14,12 @@ A specialized RAG-based system designed to index, structure, and retrieve SideFX
 ```text
 src/
     keh/                # Main Package
-        core/           # Orchestration
-        ingestion/      # Houdini Help Parsers
-        storage/        # Qdrant Adapters
-        retrieval/      # Semantic Search
+        core/           # Analytical (Brain)
+        ingestion/      # Input (Parsers)
+        factory/        # Transformation (Factories)
+        interface/      # Communication (UI)
+        service/        # Service (Telemetry)
+        storage/        # Data Layer
 docs/
     adr/                # Architectural Decision Records
     knowledge_base/     # Operational Guides

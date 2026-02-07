@@ -86,10 +86,12 @@ KEH follows a modular Python package structure within `src/keh`:
 ```text
 src/
     keh/                # Main Package
-        core/           # Orchestration & Config
-        ingestion/      # Houdini Help Parsers (BeautifulSoup/lxml)
-        storage/        # Database Adapters (Qdrant)
-        retrieval/      # Semantic Search & citation logic
+        core/           # Analytical Profile (Brain)
+        ingestion/      # Input Profile (Parsers)
+        factory/        # Transformation Profile (Vector/Graph Factories)
+        interface/      # Communication Profile (Houdini Panel)
+        service/        # Service Profile (Telemetry/Resources)
+        storage/        # Data Layer (Adapters)
 docs/
     adr/                # Architectural Decision Records
     knowledge_base/     # Operational Context
@@ -137,7 +139,7 @@ corpus/                 # The Data
 
 ## 5. Current Status & Roadmap
 
-### 5.1. Status: Setup Phase
+### 5.1. Status: Phase 1 - Ingestion & Transformation
 
 * **Environment:** Active (`keh-env`).
 * **Jira Integration:** Connected (Scripts in `tools/`).

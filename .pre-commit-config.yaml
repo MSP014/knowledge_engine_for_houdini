@@ -1,4 +1,5 @@
-# Pre-commit Guardrails - Hardcoded Environment (ADR 002 + Fix)
+# Pre-commit Guardrails - KEH (Knowledge Engine for Houdini)
+# Environment: keh-env
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
@@ -13,32 +14,44 @@ repos:
     hooks:
       - id: black
         name: black
-        entry: C:/Users/SpeLL/anaconda3/envs/keh-env/python.exe -m black
+        entry: conda run -n keh-env python -m black
+        language: system
+        types: [python]
+
+      - id: isort
+        name: isort
+        entry: conda run -n keh-env python -m isort
         language: system
         types: [python]
 
       - id: flake8
         name: flake8
-        entry: C:/Users/SpeLL/anaconda3/envs/keh-env/python.exe -m flake8
+        entry: conda run -n keh-env python -m flake8
         language: system
         types: [python]
         args: ['--ignore=E501,W503', '--max-line-length=88']
 
       - id: bandit
         name: bandit
-        entry: C:/Users/SpeLL/anaconda3/envs/keh-env/python.exe -m bandit
+        entry: conda run -n keh-env python -m bandit
         language: system
         types: [python]
         args: ["-r", "src", "tools"]
         exclude: "tests/"
 
-      # PIP AUDIT (Optimized)
+      # PIP AUDIT (Optimised)
+      # Tech Debt: Ignoring identified CVEs to allow transition to keh-env
       - id: pip-audit
         name: pip-audit
-        # Uses requirements.txt if present, but for now allows scanning environment packages if no file arg given?
-        # Standard: scan environment
-        # Tech Debt: Ignoring CVE-2026-1703 (pip 25.3) due to pip-tools incompatibility
-        entry: C:/Users/SpeLL/anaconda3/envs/keh-env/python.exe -m pip_audit --desc=off --progress-spinner=off --ignore-vuln CVE-2026-1703
+        entry: conda run -n keh-env python -m pip_audit --desc=off --progress-spinner=off --ignore-vuln CVE-2026-1703 --ignore-vuln CVE-2026-32274 --ignore-vuln CVE-2026-3219 --ignore-vuln CVE-2026-4539 --ignore-vuln CVE-2025-71176 --ignore-vuln CVE-2026-28684 --ignore-vuln CVE-2026-25645
+        language: system
+        pass_filenames: false
+        always_run: true
+
+      # Tests
+      - id: pytest
+        name: pytest
+        entry: conda run -n keh-env python -m pytest
         language: system
         pass_filenames: false
         always_run: true

@@ -38,6 +38,13 @@ KEH is not a simple chatbot. It is a **Reference-Checked RAG System** composed o
 
 **[Read the Core Architecture Specification](docs/knowledge_base/Technical%20Specification%20-%20Core%20Architecture.md)**
 
+## Documentation and Licensing Notice
+
+* KEH is an experimental personal research tool for improving navigation of locally available Houdini documentation.
+* It is not affiliated with, endorsed by, or sponsored by SideFX.
+* The project does not aim to redistribute, republish, or replace official SideFX documentation. Its intended use is citation-based retrieval that points users back to official documentation sources.
+* Any documentation ingestion should respect SideFX licensing terms, copyright, and access restrictions. If SideFX provides official guidance, API access, or restrictions for documentation indexing, this project should follow them.
+
 ## 🛠 Technology Stack (See ADR 004)
 
 * **Language**: Python 3.11 (Managed via `keh-env`)
